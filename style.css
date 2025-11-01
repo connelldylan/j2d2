@@ -1,0 +1,59 @@
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #000010 0%, #000015 70%, #000 100%);
+  font-family: 'Orbitron', sans-serif;
+  color: #00eaff;
+  overflow: hidden;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+}
+
+/* Center container */
+.container {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Logo styling */
+.logo {
+  width: 200px;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px #00eaff);
+}
+
+/* "Coming Soon" text */
+.coming-soon {
+  margin-top: 30px;
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: #00eaff;
+  text-shadow:
+    0 0 10px #00eaff,
+    0 0 20px #00eaff,
+    0 0 40px #00ffff;
+  animation: pulse 3s infinite;
+}
+
+/* Glowing animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { text-shadow: 0 0 20px #00eaff, 0 0 40px #00ffff; }
+  50% { text-shadow: 0 0 40px #00ffff, 0 0 80px #00ffff; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Optional: import futuristic font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
